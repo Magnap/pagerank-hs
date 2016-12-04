@@ -35,7 +35,6 @@ dampen :: RealNum -> Vector -> Vector
 dampen factor v = cmap ((+) ((1-factor)/(fromIntegral . size $ v)) . (*) factor) v
 
 pageRankMatrix :: (Ord a) => Map a [a] -> Matrix
---pageRankMatrix = adjacency . normalize . unstick . connectionGraph
 pageRankMatrix = adjacency . normalize . unstick . connectionGraph
 
 normalize :: Graph -> Map Edge RealNum
