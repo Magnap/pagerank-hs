@@ -25,4 +25,4 @@ executable pagerank
                      , strict
                      , vector
                      , stm
-  ghc-options: -O2 -Wall
+  ghc-options: -O2 -Wall -threaded
